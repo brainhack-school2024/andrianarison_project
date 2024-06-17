@@ -9,9 +9,9 @@ from sklearn.svm import SVC
 import xgboost as xgb
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
+import seaborn as snss
 
-# Load the CSV file
+# Load the CSV file containing pheno data and features
 file_path = '/Users/andrianarisoniangola/desktop/andrianarison_project/pheno_table.csv'
 pheno = pd.read_csv(file_path, converters={'features': lambda x: np.fromstring(x[1:-1], sep=' ')})
 
@@ -32,7 +32,7 @@ classifiers = {
     "XGBoost": xgb.XGBClassifier(objective='binary:logistic', eval_metric='logloss')
 }
 
-# Calculate accuracy and F1 score for each classifier using cross-validation
+# Calculate accuracy, F1 score and confusion matirx for each classifier 
 confusion_matrices = []
 results = {}
 for clf_name, clf in classifiers.items():

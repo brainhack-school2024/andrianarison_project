@@ -9,7 +9,7 @@ from sklearn.svm import SVC
 import xgboost as xgb
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as snss
+import seaborn as sns
 
 # Load the CSV file containing pheno data and features
 file_path = '/Users/andrianarisoniangola/desktop/andrianarison_project/pheno_table.csv'
